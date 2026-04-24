@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>BoilerMatch - Swipe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo">BoilerMatch</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="interests.html">Interests</a>
+    <a href="swipe.html" class="active">Swipe</a>
+    <a href="matches.html">Matches</a>
+    <a href="add-club.html">Add Club</a>
+  </div>
+</nav>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>BoilerMatch</h1>
+      <p>Find your perfect club at Purdue!</p>
+    </div>
+
+    <h2>Discover Clubs</h2>
+    <p class="subtext">Swipe right to match, left to skip</p>
+
+    <!-- Swipe Content -->
+    <div class="swipe-container">
+
+      <div class="swipe-card" id="card"></div>
+
+      <div class="buttons">
+        <button class="no" onclick="swipeLeft()">❌</button>
+        <button class="yes" onclick="swipeRight()">❤️</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

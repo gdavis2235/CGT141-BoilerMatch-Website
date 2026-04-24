@@ -1,0 +1,385 @@
+/*global change to prevent layout overflow issues*/
+* {
+  box-sizing: border-box;
+}
+
+/*initial campus selection page css*/
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e6d8b5, #d4b26a);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*main app container*/
+.container {
+  background: #ffffff;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  margin: 80px 0 40px 0; /*account for fixed navbar*/
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/*header*/
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  background: black;
+  color: #d4b26a;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Text */
+
+h2 {
+  margin-top: 20px;
+}
+
+.subtext {
+  color: gray;
+  font-size: 14px;
+}
+
+/*campus cards*/
+
+.card {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+/*image overlay text*/
+
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.overlay h3 {
+  margin: 0;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/*interests page css*/
+
+.interest {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.interest:hover {
+  background: #f5f5f5;
+}
+
+.interest.selected {
+  border: 2px solid #d4b26a;
+  background: #fff7e6;
+}
+
+/*grid layout for interests*/
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/*interests page match button*/
+
+.match-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d4b26a, #b89b5e);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.match-btn:hover {
+  transform: scale(1.02);
+}
+
+/*swipe page css*/
+
+.swipe-container {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.swipe-card {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.members {
+  color: gray;
+  font-size: 14px;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+.time {
+  font-size: 14px;
+  color: #555;
+}
+
+.tags span {
+  background: #f4d9a6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* Buttons */
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.buttons button {
+  font-size: 28px;
+  padding: 18px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+.no {
+  background: #ffe5e5;
+}
+
+.yes {
+  background: #e0ffe5;
+}
+
+/*matches page css*/
+
+.match-card {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.match-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.match-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.match-card p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+
+/*navbar*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  color: #d4b26a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a {
+  color: #d4b26a;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-links a.active {
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/*add club form css*/
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d4b26a;
+  box-shadow: 0 0 5px rgba(212,178,106,0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: gray;
+  margin-top: 3px;
+}
+
+/*screen size responsiveness*/
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 95%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  .swipe-card img {
+    height: 180px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Navbar adjustments */
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin: 5px;
+    font-size: 12px;
+  }
+}

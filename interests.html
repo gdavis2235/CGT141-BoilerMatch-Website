@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>BoilerMatch - Interests</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="nav-logo">BoilerMatch</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="interests.html" class="active">Interests</a>
+    <a href="swipe.html">Swipe</a>
+    <a href="matches.html">Matches</a>
+    <a href="add-club.html">Add Club</a>
+  </div>
+</nav>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>BoilerMatch</h1>
+      <p>Find your perfect club at Purdue!</p>
+    </div>
+
+    <h2>What are you interested in?</h2>
+    <p class="subtext">Select at least one category</p>
+
+    <!-- Interest Grid -->
+    <div class="interest-grid">
+
+      <div class="interest" onclick="toggleSelect(this)">❤️ Fitness</div>
+      <div class="interest" onclick="toggleSelect(this)">🎨 Art</div>
+      <div class="interest" onclick="toggleSelect(this)">🎉 Entertainment</div>
+      <div class="interest" onclick="toggleSelect(this)">💻 Technology</div>
+      <div class="interest" onclick="toggleSelect(this)">🤝 Service</div>
+      <div class="interest" onclick="toggleSelect(this)">💼 Business</div>
+      <div class="interest" onclick="toggleSelect(this)">🌍 Cultural</div>
+
+    </div>
+
+    <!-- Match Button -->
+    <button class="match-btn" onclick="goToSwipe()">Match!</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
