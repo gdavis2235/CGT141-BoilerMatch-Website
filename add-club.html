@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>BoilerMatch - Add Club</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo">BoilerMatch</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="interests.html">Interests</a>
+    <a href="swipe.html">Swipe</a>
+    <a href="matches.html">Matches</a>
+    <a href="add-club.html" class="active">Add Club</a>
+  </div>
+</nav>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>BoilerMatch</h1>
+      <p>Find your perfect club at Purdue!</p>
+    </div>
+
+    <h2>Add a Club</h2>
+<p class="subtext">Submit a club to be added</p>
+
+<div class="form-group">
+  <label for="club-name">Club Name</label>
+  <input type="text" id="club-name" placeholder="e.g. Purdue Chess Club">
+</div>
+
+<div class="form-group">
+  <label for="club-members">Members</label>
+  <input type="text" id="club-members" placeholder="e.g. 150 members">
+  <div class="form-hint">Enter approximate number of members</div>
+</div>
+
+<div class="form-group">
+  <label for="club-time">Meeting Time</label>
+  <input type="text" id="club-time" placeholder="e.g. Tuesdays 6 PM">
+</div>
+
+<div class="form-group">
+  <label for="club-tags">Tags</label>
+  <input type="text" id="club-tags" placeholder="e.g. Technology, Fitness, Entertainment">
+  <div class="form-hint">Separate tags with commas</div>
+</div>
+
+<div class="form-group">
+  <label for="club-desc">Description</label>
+  <textarea id="club-desc" placeholder="Describe important information about your club..."></textarea>
+</div>
+
+<button class="match-btn" onclick="addClub()">Submit</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
