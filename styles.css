@@ -22,9 +22,10 @@ body {
   width: 90%;
   max-width: 900px;
   padding: 20px;
-  margin: 80px 0 40px 0; /*account for fixed navbar*/
+  margin: 80px 0 40px 0;
+  /*account for fixed navbar*/
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 
   display: flex;
   flex-direction: column;
@@ -78,7 +79,7 @@ h2 {
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -93,7 +94,7 @@ h2 {
   bottom: 10px;
   left: 10px;
   color: white;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 8px 12px;
   border-radius: 10px;
 }
@@ -163,6 +164,8 @@ h2 {
 .swipe-container {
   width: 100%;
   padding: 10px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .swipe-card {
@@ -170,7 +173,7 @@ h2 {
   background: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -206,7 +209,7 @@ h2 {
   margin-right: 5px;
 }
 
-/* Buttons */
+/* buttons */
 
 .buttons {
   margin-top: 25px;
@@ -238,16 +241,24 @@ h2 {
 
 /*matches page css*/
 
+#matches-container {
+  /* id selector */
+  margin-top: 10px;
+}
+
 .match-card {
   background: white;
   padding: 10px;
   border-radius: 12px;
   margin-top: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
   gap: 10px;
+
+  clear: both;
+  /* clear property */
 }
 
 .match-card img {
@@ -255,6 +266,10 @@ h2 {
   height: 80px;
   object-fit: cover;
   border-radius: 10px;
+
+  float: left;
+  /* floated div */
+  margin-right: 10px;
 }
 
 .match-card h3 {
@@ -266,6 +281,37 @@ h2 {
   margin: 0;
   font-size: 12px;
   color: gray;
+}
+
+/* back to top anchor link button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: black;
+  color: #d4b26a;
+
+  padding: 12px 16px;
+  border-radius: 50%;
+
+  text-decoration: none;
+  font-size: 18px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  transition: 0.2s;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  background: #222;
+}
+
+/* smooth scrolling for anchor links */
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*navbar*/
@@ -288,10 +334,22 @@ h2 {
   font-size: 18px;
 }
 
+.nav-links {
+  list-style: none;
+  /* removes bullets */
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
 .nav-links a {
   color: #d4b26a;
   text-decoration: none;
-  margin-left: 15px;
   font-size: 14px;
   transition: 0.2s;
 }
@@ -333,7 +391,7 @@ h2 {
 .form-group textarea:focus {
   outline: none;
   border-color: #d4b26a;
-  box-shadow: 0 0 5px rgba(212,178,106,0.5);
+  box-shadow: 0 0 5px rgba(212, 178, 106, 0.5);
 }
 
 .form-group textarea {
@@ -345,6 +403,52 @@ h2 {
   font-size: 12px;
   color: gray;
   margin-top: 3px;
+}
+
+/* about page table */
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.info-table th {
+  background: #d4b26a;
+  color: black;
+  text-align: left;
+  padding: 10px;
+}
+
+.info-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.info-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.info-table tr:hover {
+  background: #f1f1f1;
+}
+
+a {
+  color: #b89b5e;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* gif for contact page */
+.gif {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 15px;
+  border-radius: 12px;
+  display: block;
 }
 
 /*screen size responsiveness*/

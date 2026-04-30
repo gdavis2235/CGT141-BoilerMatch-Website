@@ -6,18 +6,20 @@
   <title>BoilerMatch</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
   <nav class="navbar">
   <div class="nav-logo">BoilerMatch</div>
 
-  <div class="nav-links">
-    <a href="index.html" class="active">Home</a>
-    <a href="interests.html">Interests</a>
-    <a href="swipe.html">Swipe</a>
-    <a href="matches.html">Matches</a>
-    <a href="add-club.html">Add Club</a>
-  </div>
+  <ul class="nav-links">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="interests.html">Interests</a></li>
+  <li><a href="swipe.html">Swipe</a></li>
+  <li><a href="matches.html">Matches</a></li>
+  <li><a href="add-club.html">Add Club</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
 
   <div class="container">
@@ -31,7 +33,7 @@
     <p class="subtext">Select your Purdue campus</p>
 
     <div class="card campus" onclick="window.location.href='interests.html'">
-      <img src="images/west-lafayette.jpg" alt="West Lafayette">
+      <img src="images/west-lafayette.png" alt="Purdue University West Lafayette Campus">
       <div class="overlay">
         <h3>West Lafayette</h3>
         <p>Main campus</p>
@@ -39,7 +41,7 @@
     </div>
 
     <div class="card campus" onclick="window.location.href='interests.html'">
-      <img src="images/indy.png" alt="Indianapolis">
+      <img src="images/indy.png" alt="Purdue University Indianapolis Campus">
       <div class="overlay">
         <h3>Purdue Indianapolis</h3>
         <p>Indianapolis campus</p>
@@ -47,6 +49,9 @@
     </div>
 
   </div>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">⬆</a>
 
 </body>
 </html>

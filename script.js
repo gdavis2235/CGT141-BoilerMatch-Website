@@ -71,6 +71,38 @@ const clubs = [
     time: "Fridays 6 PM",
     tags: ["Art"],
     img: "images/art.jpg"
+  },
+  {
+    name: "Purdue Airsoft Club",
+    members: "25 members",
+    desc: "The Purdue Airsoft Club is dedicated to promoting the sport of airsoft within the Purdue community and upholding values such as teamwork, integrity and fitness. All club members have FREE access to over $10,000 in high quality airsoft guns, tactical gear, uniforms, safety gear, and other equipment such as radios for team communication. BBs are provided for free. All members get free equipment  'rentals'. Additionally, we provide an off-campus storage unit for all personal airsoft guns, as they cannot be stored on campus per Purdue rules. Everyone in the club loves the sport of airsoft, and we want to share it with as many people as possible!",
+    time: "Mondays 6:30 PM",
+    tags: ["Fitness", "Entertainment"],
+    img: "images/airsoft.jpg"
+  },
+  {
+    name: "Afghan Students Association of Purdue",
+    members: "10 members",
+    desc: "The Afghan Student Association works to showcase Afghan culture and educate the Purdue community about Afghanistan.",
+    time: "Tuesdays 7 PM",
+    tags: ["Cultural"],
+    img: "images/asap.jpg"
+  },
+  {
+    name: "Graduate Women in Business",
+    members: "10 members",
+    desc: "Graduate Women in Business is dedicated to empowering and supporting women in business, as well as preparing women for leadership positions and diversity in the workplace. This organization works to achieve this goal through education, professional development, networking, and collaboration. Leveraging the experiences of participation in information sessions with major companies, networking events with Purdue Krannert Women Alumni, skill development opportunities with other graduate students, and career fair preparation, we seek to provide multiple opportunities to truly give members valuable, empowering experiences to incorporate both personally and professionally.",
+    time: "Thursdays 6 PM",
+    tags: ["Business", "Cultural"],
+    img: "images/gwib.jpg"
+  },
+  {
+    name: "Nursing Community Service",
+    members: "15 members",
+    desc: "Nursing Community Service Organization plays many roles both on Purdue's campus as well as the Lafayette community. We look forward to assisting our partners in Lafayette as well as any other organizations that are willing to work with us. As an organization, our focus involves: Providing support to our Lafayette community through acts of service such as volunteer and fundraising events, Coordinating service projects between all classes, faculty, and student organizations within the School of Nursing, Uniting the School of Nursing students and faculty to perform acts of service to the Lafayette community, and Getting nursing students involved in both their major and community",
+    time: "Fridays 5 PM",
+    tags: ["Service", "Fitness"],
+    img: "images/nursing.jpg"
   }
 ];
 
@@ -97,9 +129,9 @@ function loadNextCard() {
   let tagsHTML = "";
   //loop through each tag in the club tags array
   for (let i = 0; i < club.tags.length; i++) {
-      //take the current tag and wrap it in a span element, then add it to the tagsHTML string
-      tagsHTML += "<span>" + club.tags[i] + "</span>";
-    }
+    //take the current tag and wrap it in a span element, then add it to the tagsHTML string
+    tagsHTML += "<span>" + club.tags[i] + "</span>";
+  }
 
   //populate card with club info from the clubs array
   //for the tags. instead of just inserting the club.tags array, we insert the tagsHTML string which contains all the club's tags wrapped in span elements for styling
@@ -177,7 +209,7 @@ function addClub() {
 
 //when the page loads, check if the card element exists (checking for swipe page) and if so, load the first card.
 //also load matches for the matches page
-window.onload = function() {
+window.onload = function () {
   if (document.getElementById("card")) {
     localStorage.removeItem("matches"); //clear matches when going to swipe page (for the purpose of this demo)
     currentIndex = 0; //reset index to show first club card

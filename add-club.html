@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>BoilerMatch - Add Club</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<nav class="navbar">
-  <div class="nav-logo">BoilerMatch</div>
+<body id="top">
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="interests.html">Interests</a>
-    <a href="swipe.html">Swipe</a>
-    <a href="matches.html">Matches</a>
-    <a href="add-club.html" class="active">Add Club</a>
-  </div>
-</nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">BoilerMatch</div>
 
-  <div class="container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="interests.html">Interests</a></li>
+      <li><a href="swipe.html">Swipe</a></li>
+      <li><a href="matches.html">Matches</a></li>
+      <li><a href="add-club.html" class="active">Add Club</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="header">
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Page Header -->
+    <header class="header">
       <h1>BoilerMatch</h1>
       <p>Find your perfect club at Purdue!</p>
-    </div>
+    </header>
 
-    <h2>Add a Club</h2>
-<p class="subtext">Submit a club to be added</p>
+    <!-- Form Section -->
+    <section>
+      <h2>Add a Club</h2>
+      <p class="subtext">Submit a club to be added</p>
 
-<div class="form-group">
-  <label for="club-name">Club Name</label>
-  <input type="text" id="club-name" placeholder="e.g. Purdue Chess Club">
-</div>
+      <form action="submit.php" method="POST">
 
-<div class="form-group">
-  <label for="club-members">Members</label>
-  <input type="text" id="club-members" placeholder="e.g. 150 members">
-  <div class="form-hint">Enter approximate number of members</div>
-</div>
+        <div class="form-group">
+          <label for="club-name">Club Name</label>
+          <input type="text" id="club-name" name="club-name" placeholder="e.g. Purdue Chess Club" required>
+        </div>
 
-<div class="form-group">
-  <label for="club-time">Meeting Time</label>
-  <input type="text" id="club-time" placeholder="e.g. Tuesdays 6 PM">
-</div>
+        <div class="form-group">
+          <label for="club-members">Members</label>
+          <input type="text" id="club-members" name="club-members" placeholder="e.g. 150 members" required>
+          <div class="form-hint">Enter approximate number of members</div>
+        </div>
 
-<div class="form-group">
-  <label for="club-tags">Tags</label>
-  <input type="text" id="club-tags" placeholder="e.g. Technology, Fitness, Entertainment">
-  <div class="form-hint">Separate tags with commas</div>
-</div>
+        <div class="form-group">
+          <label for="club-time">Meeting Time</label>
+          <input type="text" id="club-time" name="club-time" placeholder="e.g. Tuesdays 6 PM" required>
+        </div>
 
-<div class="form-group">
-  <label for="club-desc">Description</label>
-  <textarea id="club-desc" placeholder="Describe important information about your club..."></textarea>
-</div>
+        <div class="form-group">
+          <label for="club-tags">Tags</label>
+          <input type="text" id="club-tags" name="club-tags" placeholder="e.g. Technology, Fitness, Entertainment"
+            required>
+          <div class="form-hint">Separate tags with commas</div>
+        </div>
 
-<button class="match-btn" onclick="addClub()">Submit</button>
+        <div class="form-group">
+          <label for="club-desc">Description</label>
+          <textarea id="club-desc" name="club-desc" placeholder="Describe important information about your club..."
+            required></textarea>
+        </div>
 
-  </div>
+        <button type="submit" class="match-btn">Submit</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">⬆</a>
 
   <script src="script.js"></script>
 </body>
+
 </html>
